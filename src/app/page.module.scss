@@ -1,0 +1,28 @@
+@use "../scss/colors" as color;
+@use "../scss/variables" as variables;
+
+.home{
+    padding: variables.$px20;
+    h1{
+        color: color.$white-color;
+        width: 100%;
+        text-align: center;
+        margin-bottom: variables.$px20;
+        font-size: 28px;
+    }
+    p{
+        background-color: color.$white-color;
+        color: color.$black-color;
+        width: 100%;
+        text-align: center;
+        font-size: variables.$px20;
+        padding: variables.$px10;
+    }
+}
+
+.rotation{
+    padding: variables.$px30;
+    @media screen and (max-width: 500px) {
+        padding: variables.$px10;
+    }
+}

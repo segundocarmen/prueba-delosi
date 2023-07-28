@@ -1,0 +1,63 @@
+@use "../../scss/colors" as color;
+@use "../../scss/variables" as variables;
+@import '../../scss/forms.scss';
+
+.matrix{
+    width: 100%;
+    min-height: 200px;
+    max-width: 550px;
+    display: block;
+    margin: auto;
+    background-color: color.$white-color;
+    padding: variables.$px20;
+    &__title{
+        font-size: variables.$px20;
+        color: color.$primary-color;
+        width: 100%;
+        text-align: center;
+        margin-bottom: variables.$px20;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        &__ctbutton{
+            &__button{
+                border: 1px solid color.$primary-color;
+                padding: 15px;
+                border-radius: 4px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                min-width: 43px;
+                &:hover{
+                    background-color: color.$grey-color;
+                    color: color.$white-color;
+                }
+            }
+        }
+        &__matrix{
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            border: 1px solid color.$grey-color;
+            &__row{
+                display: flex;
+                justify-content: space-around;
+                &__item{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex: 1;
+                    aspect-ratio : 1 / 1;
+                    border: 1px solid color.$grey-color;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 500px) {
+        padding: variables.$px10;
+    }
+}

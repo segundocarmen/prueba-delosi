@@ -1,0 +1,66 @@
+@use "../../scss/colors" as color;
+
+.navigation{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid color.$grey-color;
+    background-color: color.$white-color;
+    &__figure{
+        width: 100%;
+        max-width: 380px;
+        box-sizing: content-box;
+        display: flex;
+        justify-content: center;
+        margin: 1rem !important;
+    }
+    &__list{
+        display: flex;
+        margin: 1rem !important;
+        padding-left: 0 !important;
+        &__item{
+            list-style: none;
+            border: 1px solid color.$grey-color;
+            margin: auto 1px;
+            &:hover, &.active{
+                background-color: color.$grey-color;
+            }
+            &__link{
+                text-decoration: none;
+                display: block;
+                cursor: pointer;
+                padding: 10px 25px;
+                width: 160px;
+                box-sizing: border-box;
+                text-align: center;
+                color: color.$grey-color;
+            }
+            &:hover > &__link, &.active > &__link{
+                color: color.$white-color;
+            }
+        }
+        @media screen and (max-width: 820px) {
+            margin: 0.5rem !important;
+        }
+    }
+    &__language{
+        display: flex;
+        margin: 1rem !important;
+        &__item{
+            cursor: pointer;
+            padding: 10px;
+            &.active{
+                color: color.$blue-color;
+                text-decoration: underline;
+            }
+        }
+        @media screen and (max-width: 820px) {
+            margin: 0 0 0.5rem !important;
+        }
+    }
+    @media screen and (max-width: 820px) {
+        padding: 0 10px;
+        flex-direction: column;
+    }
+}
