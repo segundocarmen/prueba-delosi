@@ -22,7 +22,7 @@ COPY . .
 # Expose the port that the application listens on.
 EXPOSE 3000
 
-RUN npm run build
+RUN npm install
 
 # Run the application.
-CMD npm start
+CMD npm run build && npm start
